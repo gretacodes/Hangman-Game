@@ -35,7 +35,7 @@ window.onload = function () {
   }
     
 
-  // Create guesses ul
+  // Create answers ul
    result = function () {
     wordHolder = document.getElementById('hold');
     correct = document.createElement('ul');
@@ -59,9 +59,9 @@ window.onload = function () {
   
   // Show lives
    comments = function () {
-    showLives.innerHTML = "You have " + lives + " lives";
+    showLives.innerHTML = "You have " + lives + " lives left";
     if (lives < 1) {
-      showLives.innerHTML = "Game Over";
+      showLives.innerHTML = "Game Over!";
     }
     for (let i = 0; i < guesses.length; i++) {
       if (counter + space === guesses.length) {
@@ -84,7 +84,7 @@ window.onload = function () {
     context = myStickman.getContext('2d');
     context.beginPath();
     context.strokeStyle = "#fff";
-    context.lineWidth = 2;
+    context.lineWidth = 4;
   };
   
     head = function(){
@@ -197,7 +197,7 @@ window.onload = function () {
 
     let catagoryIndex = categories.indexOf(chosenCategory);
     let hintIndex = chosenCategory.indexOf(word);
-    showClue.innerHTML = "Clue: - " +  hints [catagoryIndex][hintIndex];
+    showClue.innerHTML = "Clue: " +  hints [catagoryIndex][hintIndex];
   };
 
    // Reset
